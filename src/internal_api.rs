@@ -114,15 +114,17 @@ impl InternalApi for Enforcer {
         }
         #[cfg(not(feature = "incremental"))]
         {
-            self.build_role_links()?;
+            assert!(self.build_role_links().is_ok());
         }
         #[cfg(feature = "incremental")]
         {
-            self.build_incremental_role_links(EventData::AddPolicy(
-                sec.to_owned(),
-                ptype.to_owned(),
-                rule,
-            ))?;
+            assert!(self
+                .build_incremental_role_links(EventData::AddPolicy(
+                    sec.to_owned(),
+                    ptype.to_owned(),
+                    rule,
+                ))
+                .is_ok());
         }
 
         Ok(rule_added)
@@ -187,15 +189,17 @@ impl InternalApi for Enforcer {
         }
         #[cfg(not(feature = "incremental"))]
         {
-            self.build_role_links()?;
+            assert!(self.build_role_links().is_ok());
         }
         #[cfg(feature = "incremental")]
         {
-            self.build_incremental_role_links(EventData::AddPolicies(
-                sec.to_owned(),
-                ptype.to_owned(),
-                rules,
-            ))?;
+            assert!(self
+                .build_incremental_role_links(EventData::AddPolicies(
+                    sec.to_owned(),
+                    ptype.to_owned(),
+                    rules,
+                ))
+                .is_ok());
         }
 
         Ok(rules_added)
@@ -260,15 +264,17 @@ impl InternalApi for Enforcer {
         }
         #[cfg(not(feature = "incremental"))]
         {
-            self.build_role_links()?;
+            assert!(self.build_role_links().is_ok());
         }
         #[cfg(feature = "incremental")]
         {
-            self.build_incremental_role_links(EventData::RemovePolicy(
-                sec.to_owned(),
-                ptype.to_owned(),
-                rule,
-            ))?;
+            assert!(self
+                .build_incremental_role_links(EventData::RemovePolicy(
+                    sec.to_owned(),
+                    ptype.to_owned(),
+                    rule,
+                ))
+                .is_ok());
         }
 
         Ok(rule_removed)
@@ -334,15 +340,17 @@ impl InternalApi for Enforcer {
         }
         #[cfg(not(feature = "incremental"))]
         {
-            self.build_role_links()?;
+            assert!(self.build_role_links().is_ok());
         }
         #[cfg(feature = "incremental")]
         {
-            self.build_incremental_role_links(EventData::RemovePolicies(
-                sec.to_owned(),
-                ptype.to_owned(),
-                rules,
-            ))?;
+            assert!(self
+                .build_incremental_role_links(EventData::RemovePolicies(
+                    sec.to_owned(),
+                    ptype.to_owned(),
+                    rules,
+                ))
+                .is_ok());
         }
 
         Ok(rules_removed)
@@ -390,15 +398,17 @@ impl InternalApi for Enforcer {
         }
         #[cfg(not(feature = "incremental"))]
         {
-            self.build_role_links()?;
+            assert!(self.build_role_links().is_ok());
         }
         #[cfg(feature = "incremental")]
         {
-            self.build_incremental_role_links(EventData::RemoveFilteredPolicy(
-                sec.to_owned(),
-                ptype.to_owned(),
-                rules.clone(),
-            ))?;
+            assert!(self
+                .build_incremental_role_links(EventData::RemoveFilteredPolicy(
+                    sec.to_owned(),
+                    ptype.to_owned(),
+                    rules.clone(),
+                ))
+                .is_ok());
         }
 
         Ok((rules_removed, rules))
