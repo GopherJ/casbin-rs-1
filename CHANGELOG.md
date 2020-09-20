@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/casbin/casbin-rs/tree/HEAD)
+## [v2.0.2](https://github.com/casbin/casbin-rs/tree/v2.0.2) (2020-09-19)
 
-[Full Changelog](https://github.com/casbin/casbin-rs/compare/v2.0.1...HEAD)
+[Full Changelog](https://github.com/casbin/casbin-rs/compare/v2.0.1...v2.0.2)
 
 **Closed issues:**
 
@@ -12,6 +12,7 @@
 
 - fix: wasm checking in CI [\#207](https://github.com/casbin/casbin-rs/pull/207) ([GopherJ](https://github.com/GopherJ))
 - Automatic change log generation. [\#206](https://github.com/casbin/casbin-rs/pull/206) ([PsiACE](https://github.com/PsiACE))
+- fix: add casbin-cpp to supported languages. [\#185](https://github.com/casbin/casbin-rs/pull/185) ([divy9881](https://github.com/divy9881))
 
 ## [v2.0.1](https://github.com/casbin/casbin-rs/tree/v2.0.1) (2020-08-30)
 
@@ -72,7 +73,6 @@
 **Merged pull requests:**
 
 - Fix unhandled dquote [\#188](https://github.com/casbin/casbin-rs/pull/188) ([GopherJ](https://github.com/GopherJ))
-- fix: add casbin-cpp to supported languages. [\#185](https://github.com/casbin/casbin-rs/pull/185) ([divy9881](https://github.com/divy9881))
 
 ## [v1.1.0](https://github.com/casbin/casbin-rs/tree/v1.1.0) (2020-07-14)
 
